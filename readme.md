@@ -11,7 +11,7 @@ The `LIABILITIES` section introduced the first wrinkle — it contains two diffe
 
 ### ERD Fields
 
-![Entity Relationship Diagram](docs/erd.png)
+![Entity Relationship Diagram](erd.png)
 
 - `id` / `account_id` – Each data block may have a `null` `account_id`, including both parent and child nodes. We must derive a unique ID to key off of. A standard MD5 hash of the node's path (e.g., `"Equity>Net Income"`) provides a reproducible surrogate ID.
 - `name` / `value` – Directly from the data.
