@@ -9,6 +9,10 @@ Type (`Asset`) → Grouping (`Current`/`Fixed`) → Subgrouping (`Bank`/`AR`/`Ot
 
 The `LIABILITIES` section introduced the first wrinkle — it contains two different `Accounts Payable` entries with the same name. However, all the inner structures follow a similar pattern. Given this, I designed a table with a recursive structure that can support **N** levels of nesting.
 
+## Running Code
+
+`python flex_import.py`
+
 ### ERD Fields
 
 ![Entity Relationship Diagram](erd.png)
