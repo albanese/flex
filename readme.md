@@ -37,7 +37,7 @@ Once parsed into a clean DataFrame/table, I performed several validation checks.
    Derived IDs must be unique to prevent duplicate records. Two `items[]` with the same name and missing or identical `account_id`s are a serious red flag.
 
 3. **Accounts have Names**
-   All Accounts need a name to key off of if ID's are not guarenteed 
+   All Accounts need a name to key off of if IDs are not guaranteed 
 
 3. **Numeric Values**  
    All `value` fields should be numeric. While credit cards can have positive or negative balances, certain accounts (e.g., `Assets`) should only be positive. This needs further rules-based enforcement.
