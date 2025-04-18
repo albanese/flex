@@ -9,6 +9,12 @@ Type (`Asset`) → Grouping (`Current`/`Fixed`) → Subgrouping (`Bank`/`AR`/`Ot
 
 The `LIABILITIES` section introduced the first wrinkle — it contains two different `Accounts Payable` entries with the same name. However, all the inner structures follow a similar pattern. Given this, I designed a table with a recursive structure that can support **N** levels of nesting.
 
+`EQUITY` looks to be similar to the other two.  Before creating a model/parser/validator, I'm going to operate off of these assumptions:
+- There will always be 3 sections, Assetes, Liabilities, and Equity
+- There can be unlimited depth within the ITEMS[] array.  IRL I wouldn't expect this to go more than 4 or 5 levels deep, but best to prepare for any depth
+- Incoming JSON data is a proper formatted JSON blob
+- `name` will never be null, but `account_id` may
+
 ## Running Code
 
 `python flex_import.py`
